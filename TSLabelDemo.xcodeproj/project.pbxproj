@@ -13,18 +13,8 @@
 		C52B21521ADF06B0002ADB29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52B21501ADF06B0002ADB29 /* Main.storyboard */; };
 		C52B21541ADF06B0002ADB29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52B21531ADF06B0002ADB29 /* Images.xcassets */; };
 		C52B21571ADF06B0002ADB29 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C52B21551ADF06B0002ADB29 /* LaunchScreen.xib */; };
-		C52B21631ADF06B0002ADB29 /* TSLabelDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C52B21621ADF06B0002ADB29 /* TSLabelDemoTests.m */; };
+		C52B21861ADF071D002ADB29 /* TSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C52B21851ADF071D002ADB29 /* TSLabel.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C52B215D1ADF06B0002ADB29 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C52B213B1ADF06B0002ADB29 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C52B21421ADF06B0002ADB29;
-			remoteInfo = TSLabelDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C52B21431ADF06B0002ADB29 /* TSLabelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSLabelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +27,12 @@
 		C52B21511ADF06B0002ADB29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C52B21531ADF06B0002ADB29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C52B21561ADF06B0002ADB29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C52B215C1ADF06B0002ADB29 /* TSLabelDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSLabelDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C52B21611ADF06B0002ADB29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C52B21621ADF06B0002ADB29 /* TSLabelDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSLabelDemoTests.m; sourceTree = "<group>"; };
+		C52B21841ADF071D002ADB29 /* TSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLabel.h; sourceTree = "<group>"; };
+		C52B21851ADF071D002ADB29 /* TSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C52B21401ADF06B0002ADB29 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C52B21591ADF06B0002ADB29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				C52B21451ADF06B0002ADB29 /* TSLabelDemo */,
-				C52B215F1ADF06B0002ADB29 /* TSLabelDemoTests */,
+				C52B21831ADF071D002ADB29 /* TSLabel */,
 				C52B21441ADF06B0002ADB29 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				C52B21431ADF06B0002ADB29 /* TSLabelDemo.app */,
-				C52B215C1ADF06B0002ADB29 /* TSLabelDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,21 +83,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C52B215F1ADF06B0002ADB29 /* TSLabelDemoTests */ = {
+		C52B21831ADF071D002ADB29 /* TSLabel */ = {
 			isa = PBXGroup;
 			children = (
-				C52B21621ADF06B0002ADB29 /* TSLabelDemoTests.m */,
-				C52B21601ADF06B0002ADB29 /* Supporting Files */,
+				C52B21841ADF071D002ADB29 /* TSLabel.h */,
+				C52B21851ADF071D002ADB29 /* TSLabel.m */,
 			);
-			path = TSLabelDemoTests;
-			sourceTree = "<group>";
-		};
-		C52B21601ADF06B0002ADB29 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C52B21611ADF06B0002ADB29 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = TSLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,24 +112,6 @@
 			productReference = C52B21431ADF06B0002ADB29 /* TSLabelDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C52B215B1ADF06B0002ADB29 /* TSLabelDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C52B21691ADF06B0002ADB29 /* Build configuration list for PBXNativeTarget "TSLabelDemoTests" */;
-			buildPhases = (
-				C52B21581ADF06B0002ADB29 /* Sources */,
-				C52B21591ADF06B0002ADB29 /* Frameworks */,
-				C52B215A1ADF06B0002ADB29 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C52B215E1ADF06B0002ADB29 /* PBXTargetDependency */,
-			);
-			name = TSLabelDemoTests;
-			productName = TSLabelDemoTests;
-			productReference = C52B215C1ADF06B0002ADB29 /* TSLabelDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +123,6 @@
 				TargetAttributes = {
 					C52B21421ADF06B0002ADB29 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					C52B215B1ADF06B0002ADB29 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = C52B21421ADF06B0002ADB29;
 					};
 				};
 			};
@@ -189,7 +140,6 @@
 			projectRoot = "";
 			targets = (
 				C52B21421ADF06B0002ADB29 /* TSLabelDemo */,
-				C52B215B1ADF06B0002ADB29 /* TSLabelDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +155,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C52B215A1ADF06B0002ADB29 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -222,26 +165,11 @@
 				C52B214F1ADF06B0002ADB29 /* ViewController.m in Sources */,
 				C52B214C1ADF06B0002ADB29 /* AppDelegate.m in Sources */,
 				C52B21491ADF06B0002ADB29 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C52B21581ADF06B0002ADB29 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C52B21631ADF06B0002ADB29 /* TSLabelDemoTests.m in Sources */,
+				C52B21861ADF071D002ADB29 /* TSLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C52B215E1ADF06B0002ADB29 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C52B21421ADF06B0002ADB29 /* TSLabelDemo */;
-			targetProxy = C52B215D1ADF06B0002ADB29 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C52B21501ADF06B0002ADB29 /* Main.storyboard */ = {
@@ -359,40 +287,6 @@
 			};
 			name = Release;
 		};
-		C52B216A1ADF06B0002ADB29 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TSLabelDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TSLabelDemo.app/TSLabelDemo";
-			};
-			name = Debug;
-		};
-		C52B216B1ADF06B0002ADB29 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TSLabelDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TSLabelDemo.app/TSLabelDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,14 +306,7 @@
 				C52B21681ADF06B0002ADB29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		C52B21691ADF06B0002ADB29 /* Build configuration list for PBXNativeTarget "TSLabelDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C52B216A1ADF06B0002ADB29 /* Debug */,
-				C52B216B1ADF06B0002ADB29 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
