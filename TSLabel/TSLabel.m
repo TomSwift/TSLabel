@@ -6,7 +6,6 @@
 //
 
 #import "TSLabel.h"
-#import <objc/runtime.h>
 
 NSString* const TSLinkAttributeName		= @"ts_linkAttributeName";
 NSString* const TSLabelAttributeName	= @"ts_labelAttributeName";
