@@ -12,6 +12,20 @@ NSString* const TSLinkAttributeName		= @"ts_linkAttributeName";
 NSString* const TSLabelAttributeName	= @"ts_labelAttributeName";
 NSString* const TSMarker				= @"\u2060"; // word-joiner, a zero-width non-breaking space
 
+@interface TSWeakObjectContainer : NSObject
+@property (weak, nonatomic) id object;
+@end
+@implementation TSWeakObjectContainer
+- (id) initWithObject: (id) object
+{
+	if ( self = [super init] )
+	{
+		self.object = object;
+	}
+	return self;
+}
+@end
+
 @interface TSLinkInfo : NSObject
 @property (strong, nonatomic) NSURL* url;
 @property (assign, nonatomic) NSRange range;
@@ -36,9 +50,9 @@ NSString* const TSMarker				= @"\u2060"; // word-joiner, a zero-width non-breaki
 - (void) layoutManager: (NSLayoutManager *) layoutManager didCompleteLayoutForTextContainer: (NSTextContainer *) textContainer atEnd: (BOOL)layoutFinishedFlag
 {
 	// search for our custom label attribute - if we have it we'll tell it about link bounds!
-	TSLabel* label = [self attribute: TSLabelAttributeName
+	TSLabel* label = [[self attribute: TSLabelAttributeName
 							 atIndex: 0
-					  effectiveRange: nil];
+					  effectiveRange: nil] object];
 	
 	if ( label != nil && [label isKindOfClass: [TSLabel class]] )
 	{
@@ -167,7 +181,7 @@ NSString* const TSMarker				= @"\u2060"; // word-joiner, a zero-width non-breaki
 		// include a NSLinkAttributeName at location 0, otherwise UILabel apparently won't use a NSLayoutManager...
 		NSAttributedString* marker = [[NSAttributedString alloc] initWithString: @"\u200b"
 																	 attributes: @{ NSLinkAttributeName : TSMarker,
-																					TSLabelAttributeName : self }];
+																					TSLabelAttributeName : [[TSWeakObjectContainer alloc] initWithObject: self] }];
 		
 		[mutableText insertAttributedString: marker atIndex: 0];
 	}
