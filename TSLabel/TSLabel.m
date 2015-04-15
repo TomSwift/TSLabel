@@ -35,7 +35,6 @@ NSString* const TSMarker				= @"\u2060"; // word-joiner, a zero-width non-breaki
 @end
 
 @interface TSLabel ()
-@property (strong, nonatomic, readonly) NSLayoutManager* ts_layoutManager;
 @property (strong, nonatomic) NSSet* links;
 @end
 
@@ -125,11 +124,6 @@ NSString* const TSMarker				= @"\u2060"; // word-joiner, a zero-width non-breaki
 	
 	// such that we can get touches:
 	self.userInteractionEnabled = YES;
-}
-
-- (NSLayoutManager*) ts_layoutManager
-{
-	return objc_getAssociatedObject(self, @selector(ts_layoutManager));
 }
 
 - (NSAttributedString*) ts_configureAttributedText: (NSAttributedString*) attributedText
