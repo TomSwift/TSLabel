@@ -173,7 +173,7 @@ NSString* const TSMarker				= @"\u2060"; // word-joiner, a zero-width non-breaki
 	if ( nil == [mutableText attribute: TSLabelAttributeName atIndex: 0 effectiveRange: nil] )
 	{
 		// include a NSLinkAttributeName at location 0, otherwise UILabel apparently won't use a NSLayoutManager...
-		NSAttributedString* marker = [[NSAttributedString alloc] initWithString: @"\u200b"
+		NSAttributedString* marker = [[NSAttributedString alloc] initWithString: TSMarker
 																	 attributes: @{ NSLinkAttributeName : TSMarker,
 																					TSLabelAttributeName : [[TSWeakObjectContainer alloc] initWithObject: self] }];
 		
