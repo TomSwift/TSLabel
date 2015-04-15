@@ -38,6 +38,9 @@
 	
 	_label2.delegate = self;
 	_label2.attributedText = at2;
+	
+	[_label2 setLinkAttributes: @{ NSForegroundColorAttributeName : [UIColor blueColor] } forState: UIControlStateNormal];
+	[_label2 setLinkAttributes: @{ NSForegroundColorAttributeName : [UIColor greenColor], NSBackgroundColorAttributeName : [UIColor lightGrayColor] } forState: UIControlStateHighlighted];
 }
 
 // TSLabelDelegate methods

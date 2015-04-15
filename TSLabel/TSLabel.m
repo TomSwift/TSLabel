@@ -199,6 +199,7 @@ NSString* const TSMarker				= @"\u2060"; // word-joiner, a zero-width non-breaki
 - (void) setLinkAttributes: (NSDictionary*) attributes forState: (UIControlState) state
 {
 	_linkAttributes[@(state)] = attributes;
+	[self setAttributedText: self.attributedText];
 }
 
 - (NSDictionary*) linkAttributesForState: (UIControlState) state
