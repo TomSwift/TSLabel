@@ -54,6 +54,10 @@ NSString* const TSMarker				= @"\u2060"; // word-joiner, a zero-width non-breaki
 	
 	if ( label != nil && [label isKindOfClass: [TSLabel class]] )
 	{
+		//this happens if label clips part of the content (NSInvalidArgumentException) 
+		if([layoutManager.textContainers indexOfObject:textContainer] == NSNotFound )
+            		layoutManager = textContainer.layoutManager;
+		
 		CGRect containerGlyphBounds = [layoutManager boundingRectForGlyphRange: [layoutManager glyphRangeForTextContainer: textContainer] inTextContainer: textContainer];
 		
 		// determine the bounds of each link and record that information with the TSLabel
