@@ -71,7 +71,8 @@ NSString* const TSMarker				= @"\u2060"; // word-joiner, a zero-width non-breaki
 
 							  NSRange glyphRange = [layoutManager glyphRangeForCharacterRange: range actualCharacterRange: nil];
 							  CGRect bounds = [layoutManager boundingRectForGlyphRange: glyphRange inTextContainer: textContainer];
-							  link.bounds = CGRectOffset(bounds, 0, (label.bounds.size.height-containerGlyphBounds.size.height)/2);
+							  CGRect boundsOffset = CGRectOffset(bounds, 0, (label.bounds.size.height-containerGlyphBounds.size.height)/2);
+                                                          link.bounds = CGRectMake(boundsOffset.origin.x - 7.5, boundsOffset.origin.y - 7.5, boundsOffset.size.width + 15, boundsOffset.size.height + 15); // Make links more tappable by increasing the bounding box							  
 							  
 							  [links addObject: link];
 						  }
